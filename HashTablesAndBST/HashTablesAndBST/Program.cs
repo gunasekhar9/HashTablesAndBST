@@ -12,12 +12,11 @@ namespace HashTablesAndBST
             while (flag)
             {
                 Console.WriteLine("Welcome to Hash Tables and BST Programs");
-                Console.WriteLine("Choose the program to be executed : \n 1. Sentence Frequency \n 4. Binary Search Tree Creation \n 5. Binary Tree Figure Creation \n 6. Exit");
+                Console.WriteLine("Choose the program to be executed : \n 1. Sentence Frequency \n 4. Binary Search Tree Creation \n 5. Binary Tree Figure Creation \n 6. Binary Search Tree Figure \n 7. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
-
                         hash.Add("0", "To");
                         hash.Add("1", "be");
                         hash.Add("2", "or");
@@ -33,7 +32,7 @@ namespace HashTablesAndBST
                         Console.WriteLine("4th index Value : " + hash4);
                         break;
                     case 4:
-                        Console.WriteLine("Welcome to Binary Search Tree]");
+                        Console.WriteLine("Welcome to Binary Search Tree");
                         binarySearch.Insert(30);
                         binarySearch.Insert(70);
                         binarySearch.Display();
@@ -56,6 +55,25 @@ namespace HashTablesAndBST
                         binarySearch.GetSize();
                         break;
                     case 6:
+                        Console.WriteLine("Binary Search Tree Figure");
+                        binarySearch.Insert(30);
+                        binarySearch.Insert(70);
+                        binarySearch.Insert(22);
+                        binarySearch.Insert(40);
+                        binarySearch.Insert(60);
+                        binarySearch.Insert(95);
+                        binarySearch.Insert(11);
+                        binarySearch.Insert(65);
+                        binarySearch.Insert(3);
+                        binarySearch.Insert(16);
+                        binarySearch.Insert(63);
+                        binarySearch.Insert(67);
+                        binarySearch.Display();
+                        binarySearch.GetSize();
+                        bool result = binarySearch.IfExists(67, binarySearch);
+                        Console.WriteLine(result);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
